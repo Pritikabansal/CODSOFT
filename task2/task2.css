@@ -1,0 +1,750 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* scrolling start---------------->>>>>>>>>>>>>>>>>>>>>>>>> */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollpath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top, rgb(117, 243, 117), #00ffe7);
+}
+
+#progressbar::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}
+
+/* scrolling end------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* header start --------------------------------------------->>>>>>>>>>>>>>>>>>>>*/
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(Untitled\ design.png);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span {
+    color: rgb(253, 153, 60);
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: rgb(253, 153, 60);
+    transition: .4s;
+}
+
+/* button start------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.btn {
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    position: relative;
+    width: 150px;
+    padding: 18px 0;
+    text-align: center;
+    margin: 20px 7px;
+    font-weight: bold;
+    border: 2px solid rgb(253, 153, 60);
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn span {
+    background: rgb(253, 153, 60);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+
+.btn:hover span {
+    width: 100%;
+}
+
+/* button end ----------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.follo-icon {
+    position: initial;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+
+}
+
+.follo-icon a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(253, 153, 60);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(253, 153, 60);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.follo-icon a:hover {
+    color: #000;
+}
+
+.follo-icon a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+    background: rgb(253, 153, 60);
+}
+
+.follo-icon a:hover::before {
+    width: 100%;
+}
+
+
+.content {
+    position: absolute;
+    top: 53%;
+    left: 45%;
+    transform: translateY(-50%);
+}
+
+.content p {
+    color: rgba(170, 169, 169, 0.794);
+    padding-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.h1 {
+    color: rgb(255, 255, 255);
+    margin: 20px 0px 20px;
+    font-size: 70px;
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.content h4 {
+    color: rgba(197, 192, 197, 0.8);
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+/* header end--------------------->>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* about start-------------------->>>>>>>>>>>>>>>>>>>>>>>> */
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background-color: #28313b;
+}
+
+.a-heading {
+    margin-bottom: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-weight: 600;
+}
+
+.about-box {
+    height: 620px;
+    margin-left: 350px;
+    margin-right: 350px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.about-text {
+    height: 600px;
+    width: 80%;
+}
+
+.a-cont {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.bb {
+    margin-left: 50px;
+    margin-top: 60px;
+}
+
+strong {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: lighter;
+    padding: 5px 5px;
+}
+
+.cource {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cource div {
+    height: 300px;
+    width: 380px;
+    margin-top: 50px;
+    border: 3px solid rgba(128, 128, 128, 0.375);
+    border-radius: 30px;
+    background-color: rgba(110, 110, 110, 0.052);
+
+}
+
+.icon-box {
+    position: relative;
+    top: 35px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #202830;
+    border: 3px solid rgba(128, 128, 128, 0.375);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box i {
+    font-size: 35px;
+    color: rgba(219, 164, 62, 0.958);
+}
+
+.icon-b {
+    display: flex;
+    justify-content: space-around;
+    height: 20px;
+
+}
+
+.c-box1,
+.c-box2 {
+    padding-top: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    font-size: smaller;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+/* about end----------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* skils start---------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.skills {
+    height: 100vh;
+    width: 100%;
+    background-color: #202830;
+}
+
+.s-box {
+    margin-left: 250px;
+    margin-right: 250px;
+    height: 100%;
+}
+
+.s-head {
+    display: flex;
+    border-bottom: 2px dashed rgb(253, 153, 60);
+    padding-top: 80px;
+}
+
+.s-topic {
+    font-size: 60px;
+    width: 100%;
+    margin-left: 30px;
+    font-weight: bolder;
+    color: white;
+    height: 180px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.s-topic-text {
+    font-size: 15px;
+    color: grey;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sc-box {
+    height: 630px;
+    width: 100%;
+
+}
+
+.sc-inner-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 610px;
+
+}
+
+.sc-box1 {
+    height: 600px;
+    width: 500px;
+
+}
+
+.sc-box2 {
+    height: 600px;
+    width: 700px;
+}
+
+.sc-box1_1 {
+    display: flex;
+    align-items: center;
+}
+
+.sc-box1_1 img {
+    width: 60px;
+    height: 60px;
+    margin-top: 100px;
+}
+
+.sc-box1_1 p {
+    line-height: 1.3;
+    color: rgba(210, 208, 208, 0.773);
+    letter-spacing: 0.3px;
+
+}
+
+.sc-box1_1-content h4 {
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.sc-box1_1-content {
+    margin-left: 40px;
+    margin-top: 90px;
+}
+
+.container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 50px 45px;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.container .skill-box {
+    width: 100%;
+    margin: 55px 0;
+}
+
+.skill-box .title {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: grey;
+    letter-spacing: 2px;
+}
+
+.skill-box .skill-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0, 0, 0, 0.15);
+
+}
+
+.skill-bar .skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    background: linear-gradient(-229deg, #f9c238, #f6ae29);
+}
+
+.ff {
+    width: 90%;
+}
+
+.aa {
+    width: 55%;
+}
+
+.bbb {
+    width: 75%;
+}
+
+.cc {
+    width: 89%;
+}
+
+.dd {
+    width: 70%;
+}
+
+/* skill end----------------->>>>>>>>>>>>>>>>>>>>> */
+
+/* contact start------------->>>>>>>>>>>>>>>>>>>>>> */
+
+.contact {
+    height: 400px;
+    width: 100%;
+    background-color: #28313b;
+}
+
+.content-box {
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont-box1 {
+    height: 400px;
+    width: 650px;
+    margin-left: 230px;
+}
+
+.cont-box1 p {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.cont-box1 img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.cont-box1 span {
+    font-size: 17px;
+    letter-spacing: 2px;
+    padding-left: 190px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cont-box1 h3 {
+    font-size: x-large;
+    padding-left: 220px;
+    padding-top: 40px;
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(182, 180, 180);
+}
+
+.cont-box1 .follo-icon {
+    margin-left: 215px;
+}
+
+.cont-box2 {
+    height: 400px;
+    width: 550px;
+    margin-right: 300px;
+    margin-top: 150px;
+
+}
+
+.cont-box2 p {
+    line-height: 1.5;
+    color: rgba(210, 208, 208, 0.773);
+    letter-spacing: 0.3px;
+}
+
+/* contact end--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width:400px) {
+    .header {
+        background-image: url(mobile_my\ \(2\).png);
+        height: 900px;
+    }
+
+    nav {
+        padding-top: 0px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    .btn {
+        font-size: 12px;
+        width: 100px;
+        padding: 12px;
+        margin-left: 0px;
+    }
+
+    .follo-icon {
+        margin-left: 20px;
+    }
+
+    .content {
+        top: 71%;
+        left: 16%;
+    }
+
+    .content p {
+        padding-right: 20px;
+        font-size: small;
+    }
+
+    .h1 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .about {
+        height: 1000px;
+    }
+
+    .a-heading {
+        padding-top: 0px;
+    }
+
+    .about-box {
+        height: 600px;
+        margin-left: 20px;
+        margin-right: 15px;
+        border-radius: 15px;
+    }
+
+    .a-cont {
+        font-size: 16px;
+    }
+
+    .cource div {
+        height: 270px;
+        width: 280px;
+    }
+
+    .icon-b {
+        display: block;
+
+    }
+
+    .icon-box {
+        margin-bottom: 210px;
+        margin-left: 65px;
+    }
+
+    .cource {
+        height: 300px;
+        width: 100%;
+        display: inline-grid;
+        justify-content: space-around;
+    }
+
+    .c-box1 p {
+        font-size: 12px;
+    }
+
+    .skills {
+        height: 2189px;
+    }
+
+    .s-box {
+        margin-left: 0px;
+        margin-right: 20px;
+        height: 100%;
+    }
+
+    .s-head {
+        display: block;
+        padding-top: 690px;
+    }
+
+    .s-topic {
+        font-size: 40px;
+        margin-left: 50px;
+        height: 120px;
+    }
+
+    .s-topic-text {
+        font-size: 13px;
+        padding-left: 0px;
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    .sc-box1_1 img {
+        margin-top: 60px;
+        margin-left: 30px;
+    }
+
+    .sc-box1_1-content {
+        margin-left: 22px;
+        margin-top: 20px;
+    }
+
+    .sc-inner-box,
+    .sc-box1_1 {
+        display: block;
+    }
+
+    .container {
+        margin: 100px 4px;
+    }
+
+    .container .skill-box {
+        width: 60%;
+    }
+
+    .skill-box .title {
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+
+    .contact {
+        height: 370px;
+    }
+
+    .cont-box1 {
+        height: 180px;
+        width: 310px;
+        margin-left: 0px;
+        padding-top: 20px;
+    }
+
+    .cont-box1 span {
+        padding-left: 40px;
+    }
+
+    .cont-box1 p {
+        padding-top: 10px;
+        padding-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .content-box {
+        margin-left: 0px;
+        display: block;
+        justify-content: none;
+        align-items: none;
+    }
+
+    .cont-box2 {
+        height: 100px;
+        width: 300px;
+        margin-top: 65px;
+
+    }
+
+    .cont-box1 h3 {
+        padding-left: 70px;
+        padding-top: 20px;
+
+    }
+
+    .cont-box1 .follo-icon {
+        margin-left: 75px;
+    }
+
+    .cont-box2 p {
+        display: none;
+    }
+}
